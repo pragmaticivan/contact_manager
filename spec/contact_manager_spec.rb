@@ -15,6 +15,9 @@ describe ContactManager do
     expect(row).to match_array(['Last: Ghent, First: Amy, Phone: 7324301260, E-Mail: AmyJGhent@dayrep.com'])
   end
   it 'finds multiple contacts by letter' do
-    ap ContactManager.find_by_letter('contacts.csv','s')
+    row =  ContactManager.find_by_letter('contacts.csv','s')
+    expect(row).to contain_exactly('Last: Sauceda, First: Lisa, Phone: 3076999741, E-Mail: LisaESauceda@armyspy.com',
+                                   'Last: Sauceda, First: Lisa, Phone: 3076999741, E-Mail: LisaESauceda@armyspy.com',
+                                   'Last: Shryock, First: William, Phone: 7704585414, E-Mail: WilliamLShryock@rhyta.com')
   end
 end

@@ -1,5 +1,6 @@
 # ContactManager
 
+By Ivan Santos
 
 ## Installation
 
@@ -16,6 +17,12 @@ And then execute:
 Or install it yourself as:
 
     $ gem install contact_manager
+
+## Usage
+	ContactManager.find_by_email('contacts.csv','LisaESauceda@armyspy.com')
+___________________________________________________________
+
+	ContactManager.find_by_letter('contacts.csv','g')
 
 
 ## Development
